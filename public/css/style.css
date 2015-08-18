@@ -1,0 +1,76 @@
+/* header */
+#header{height: 100px;}
+#nav_top{margin: 0 auto;width: 980px;right:50%;margin-right:-490px}
+#top_nav{width: 575px !important;}
+#login{float: right; margin-top: 25px; color: #828282;}
+
+#brand_img{height: 20px}
+
+.nav{width: 170px}
+
+.auth_wrapper {width: 300px;float: right;}
+.auth_set_id {margin-top: 20px;float: left; width:80px;}
+.auth_set_password {margin-left: 10px;margin-top: 20px; float: left; width: 100px;}
+.submit_auth {margin-left: 10px;float: left;}
+
+/* profile */
+#profile{}
+#profile_img{height: 170px}
+
+/* today, total */
+.today_show{display: inline-block;border: 1px solid lightgray;margin: 5px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;border-top-left-radius: 10px;border-top-right-radius: 10px;}
+.today, .total{float: left;width: 80px}
+.today_title, .total_title{margin-left:20px;font-size: 8px;float: left}
+.today_num, .total_num{margin-left:10px;font-size: 10px;float: left}
+
+/* selection */
+#tab1, #tab2, #tab3, #tab4{padding-top: 10px}
+
+/* table */
+.table_title_year{width: 150px;}
+.table_title_intro{width: 120px;}
+.table_title_content{}
+.table_content{}
+.table_title_file{width: 70px;}
+
+/* blog */
+.blog_wrapper{}
+.blog_content_wrapper{padding: 10px;width: 700px; border: 1px solid lightgray;margin: 5px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;border-top-left-radius: 10px;border-top-right-radius: 10px;}
+.blog_content_title{width: 100%;height: 50px}
+.blog_content{width: 100%; height: 100px}
+.blog_content_img{width: 100%;}
+.blog_comment{width: 100%; height: 50px}
+
+/* blog write*/
+.write_wrapper{}
+.write_title{width: 100%;}
+.write_content{width: 100%;}
+.write_submit{float: right;}
+
+/* visitor */
+.visitor_wrapper{width: 740px;}
+.visitor_welcome{width:290px;float: left;text-align: center;}
+.visitor_content_wrapper{width: 450px;float: left;}
+.visitor{float: left;width: 100px;}
+.visitor_content_title{float: left;width: 280px;}
+.visitor_content{width: 350px;float: left;clear: both;}
+.visitor_set{width: 80px}
+.visitor_set_title{width: 250px}
+.visitor_set_content{width: 100%}
+.submit_insert_message{height: 110px}
+
+
+/* visitor message*/
+.form_wrapper{}
+
+.message_wrapper{width: 350px; height: 80px;float: left;border: 1px solid lightgray;margin: 5px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;border-top-left-radius: 10px;border-top-right-radius: 10px;}
+.message_left{width: 100px; float: left;}
+.message_right{width: 220px; float: left;}
+.message_id{text-align: center;padding-top: 10px;}
+.message_visitor{margin-left:10px;height:60px;}
+.message_title{padding-top: 10px;}
+.message_content{height:40px;overflow:scroll;}
+
+/* footer */
+#footer{margin: 0 auto;width: 980px;right:50%;height: 100px;}
+#footer_content{padding-top: 20px;text-align: center;font-size: 14px;}
