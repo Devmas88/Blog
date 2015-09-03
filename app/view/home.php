@@ -211,7 +211,7 @@
 	    <h3>2015 킨텍스 World Electronics Brand Show</h3>
 	  </div>
 	  <div class="modal-body">
-	    <p><img src="../public/img/confirm/WorldElectronics.png" alt=""></p>
+	    <p><img src="./public/img/confirm/WorldElectronics.png" alt=""></p>
 	  </div>
 	  <div class="modal-footer">
 	  </div>
@@ -224,7 +224,7 @@
 	    <h3>제3회 서강대학교 창업경진대회</h3>
 	  </div>
 	  <div class="modal-body">
-	    <p><img src="../public/img/confirm/sogang.png" alt=""></p>
+	    <p><img src="./public/img/confirm/sogang.png" alt=""></p>
 	  </div>
 	  <div class="modal-footer">
 	  </div>
@@ -237,7 +237,7 @@
 	    <h3>사단법인 한국디지털콘텐츠학회 우수 논문상</h3>
 	  </div>
 	  <div class="modal-body">
-	    <p><img src="../public/img/confirm/nonmoon.png" alt=""></p>
+	    <p><img src="./public/img/confirm/nonmoon.png" alt=""></p>
 	  </div>
 	  <div class="modal-footer">
 	  </div>
@@ -250,7 +250,7 @@
 	    <h3>제29회 대홍기획 디콘상</h3>
 	  </div>
 	  <div class="modal-body">
-	    <p><img src="../public/img/confirm/daehong1.png" alt=""></p>
+	    <p><img src="./public/img/confirm/daehong1.png" alt=""></p>
 	  </div>
 	  <div class="modal-footer">
 	  </div>
@@ -263,7 +263,7 @@
 	    <h3>제29회 대홍기획 동상</h3>
 	  </div>
 	  <div class="modal-body">
-	    <p><img src="../public/img/confirm/daehong2.png" alt=""></p>
+	    <p><img src="./public/img/confirm/daehong2.png" alt=""></p>
 	  </div>
 	  <div class="modal-footer">
 	  </div>
@@ -276,7 +276,7 @@
 	    <h3>2015 스마트앱창작터</h3>
 	  </div>
 	  <div class="modal-body">
-	    <p><img src="../public/img/confirm/smart2.png" alt=""></p>
+	    <p><img src="./public/img/confirm/smart2.png" alt=""></p>
 	  </div>
 	  <div class="modal-footer">
 	  </div>
@@ -289,7 +289,7 @@
 	    <h3>2014 App Show Korea</h3>
 	  </div>
 	  <div class="modal-body">
-	    <p><img src="../public/img/confirm/appshow.png" alt=""></p>
+	    <p><img src="./public/img/confirm/appshow.png" alt=""></p>
 	  </div>
 	  <div class="modal-footer">
 	  </div>
@@ -302,7 +302,7 @@
 	    <h3>2014 App Show Korea</h3>
 	  </div>
 	  <div class="modal-body">
-	    <p><img src="../public/img/confirm/2014hansung.png" alt=""></p>
+	    <p><img src="./public/img/confirm/2014hansung.png" alt=""></p>
 	  </div>
 	  <div class="modal-footer">
 	  </div>
@@ -315,7 +315,7 @@
 	    <h3>2014 App Show Korea</h3>
 	  </div>
 	  <div class="modal-body">
-	    <p><img src="../public/img/confirm/techdream.png" alt=""></p>
+	    <p><img src="./public/img/confirm/techdream.png" alt=""></p>
 	  </div>
 	  <div class="modal-footer">
 	  </div>
