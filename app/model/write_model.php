@@ -15,7 +15,8 @@ class Write_Model {
 	// 모든 글 리스트
 	public function getWriteList() 
 	{	
-		$sql = "SELECT * FROM blog_content";
+		$sql = "SELECT * FROM blog_content ORDER BY id DESC";
+		//$sql = "SELECT * FROM blog_content";
 		// 쿼리문을 실행하기전 미리실행해 오류 검사 PDO문법, 미리검사해 SQL injection막을 수 있음
 		$query = $this->db->prepare($sql);
 		// 쿼리 실행

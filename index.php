@@ -1,6 +1,6 @@
 <?php 
 # Plasma
-include '/Users/Humanscape/Desktop/Plasma/include.php';
+include '../Plasma/include.php';
 
 # Config
 include 'app/config.php';

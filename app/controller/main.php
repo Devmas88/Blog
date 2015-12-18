@@ -16,6 +16,13 @@ class Main extends Plasma_Controller
 		require 'app/view/footer.php';
 	}
 
+	public function setting()
+	{
+		require 'app/view/header.php';
+		require 'app/view/setting.php';
+		require 'app/view/footer.php';
+	}
+
 	public function auth()
 	{
 		if (isset($_POST["submit_auth"])) {
@@ -27,9 +34,13 @@ class Main extends Plasma_Controller
 			if ($auth_id === $AUTH_ID && $auth_password === $AUTH_PASS) {
 				// 세션에 아이디 값 저장
 				$_SESSION['id'] = $auth_id;
+				header("Refresh:0; url=/blog/main/");
 			}
-		} 
-		header('location: ' . URL . 'blog/main/');
+		} else {
+			# session_destroy();
+			unset($_SESSION['id']);
+			header("Location:/blog/main/");
+		}
 	}
 
 	public function blog()
