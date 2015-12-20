@@ -20,7 +20,7 @@
 	    	<div>
 			<?php if (isset($_SESSION['id'])) { ?>
 				<br><br>
-	    		<button class="btn btn-inverse" name="blog_write" onclick="location.href='/blog/main/blog_write'">글쓰기</button>
+	    		<button class="btn btn-inverse" name="blog_write" onclick="location.href='/Blog/main/blog_write'">글쓰기</button>
 	    	<? } ?>
 	    	</div>
 	    </div>

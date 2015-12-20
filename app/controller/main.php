@@ -34,12 +34,12 @@ class Main extends Plasma_Controller
 			if ($auth_id === $AUTH_ID && $auth_password === $AUTH_PASS) {
 				// 세션에 아이디 값 저장
 				$_SESSION['id'] = $auth_id;
-				header("Refresh:0; url=/blog/main/");
+				header("Refresh:0; url=/Blog/main/");
 			}
 		} else {
 			# session_destroy();
 			unset($_SESSION['id']);
-			header("Location:/blog/main/");
+			header("Location:/Blog/main/");
 		}
 	}
 
@@ -136,12 +136,12 @@ class Main extends Plasma_Controller
 		if (isset($_POST["submit_insert_message"])) {
 			$visitor_model->addMessage($_POST["title"], $_POST["visitor"], $_POST["content"]);
 		}
-		header('location: ' . URL . 'blog/main/visitor');
+		header('location: ' . URL . 'Blog/main/visitor');
 	}
 
 	public function logout()
 	{
 		unset($_SESSION['id']);
-		header('location: ' . URL . 'blog/main/');
+		header('location: ' . URL . 'Blog/main/');
 	}
 }

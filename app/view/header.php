@@ -21,12 +21,12 @@
         </div>
     	<div id="nav_top" class="navbar">
 		  <div>
-		    <a class="brand" href="/blog/main/"><img src="../public/img/brand.png" id="brand_img" alt="brand"></a>
+		    <a class="brand" href="/Blog/main/"><img src="../public/img/brand.png" id="brand_img" alt="brand"></a>
 		    <ul class="nav" id="top_nav">
-		      <li <? if($_SERVER['REQUEST_URI'] == '/blog/main/') { ?> class="active"<? } ?>><a href="/blog/main/">소개</a></li>
-		      <li <? if($_SERVER['REQUEST_URI'] == '/blog/main/blog') { ?> class="active"<? } ?>><a href="/blog/main/blog">블로그</a></li>
-              <li <? if($_SERVER['REQUEST_URI'] == '/blog/main/visitor') { ?> class="active"<? } ?>><a href="/blog/main/visitor">방명록</a></li>
-              <li <? if($_SERVER['REQUEST_URI'] == '/blog/main/setting') { ?> class="active"<? } ?>><a href="/blog/main/setting">설정</a></li>
+		      <li <? if($_SERVER['REQUEST_URI'] == '/Blog/main/') { ?> class="active"<? } ?>><a href="/Blog/main/">소개</a></li>
+		      <li <? if($_SERVER['REQUEST_URI'] == '/Blog/main/blog') { ?> class="active"<? } ?>><a href="/Blog/main/blog">블로그</a></li>
+              <li <? if($_SERVER['REQUEST_URI'] == '/Blog/main/visitor') { ?> class="active"<? } ?>><a href="/Blog/main/visitor">방명록</a></li>
+              <li <? if($_SERVER['REQUEST_URI'] == '/Blog/main/setting') { ?> class="active"<? } ?>><a href="/Blog/main/setting">설정</a></li>
 		    </ul>
 		  </div>
 		</div>
