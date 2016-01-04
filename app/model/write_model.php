@@ -24,6 +24,29 @@ class Write_Model {
 		return $query->fetchAll();
 	}
 
+	// 게시글 수정
+	public function getModifyView($id)
+	{	
+		$sql = "SELECT * FROM blog_content where id={$id}";
+		$query = $this->db->prepare($sql);
+		$query->execute();
+		return $query->fetch();
+	}
+
+	public function updateBlog($id, $title, $content, $file)
+	{
+		$id = (int)$id;
+		$title = strip_tags($title);
+		$content = strip_tags($content);
+		$file = strip_tags($file);
+
+		echo $title;
+
+		$sql = "UPDATE blog_content SET title = :title, content = :content, file = :file where id = :id";
+		$query = $this->db->prepare($sql);
+		$query->execute(array(':id' => $id, ':title' => $title, ':content' => $content, ':file' => $file));
+	}
+
 	// 블로그 등록 , 파일도 같이 등록
 	public function addFile($title, $content, $file)
 	{

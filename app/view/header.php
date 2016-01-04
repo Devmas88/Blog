@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php 
+ob_start();
+ ?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -11,6 +13,27 @@
         <title>Devmas - Blog</title>
     </head>
     <body>
+    <?php 
+    # count
+    $fp = fopen("count.txt", "r");
+
+    $count = fgets($fp, 4096);
+
+    fclose($fp);
+
+    if (!$_COOKIE["ip"]) {
+      
+      echo $count++;
+
+      $fw = fopen("count.txt", "w");
+
+      fwrite($fw, $count);
+
+      fclose($fw);
+
+      setcookie("ip", $_SERVER["REMOTE_ADDR"], time() + 3600, "/");
+    }
+     ?>
     <div id="header">
         <div id="layers">
           <div class="layer"></div>

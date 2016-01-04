@@ -49,6 +49,8 @@ class Main extends Plasma_Controller
 		$write_model = $this->loadModel('Write_Model');
 		$write_list = $write_model->getWriteList();
 
+		
+
 		require 'app/view/header.php';
 		require 'app/view/blog.php';
 		require 'app/view/footer.php';
@@ -59,6 +61,74 @@ class Main extends Plasma_Controller
 		require 'app/view/header.php';
 		require 'app/view/blog_write.php';
 		require 'app/view/footer.php';
+	}
+
+	public function blog_modify($id)
+	{	
+		$write_model = $this->loadModel('Write_Model');
+		$write_data = $write_model->getModifyView($id);
+
+		require 'app/view/header.php';
+		require 'app/view/blog_modify.php';
+		require 'app/view/footer.php';
+	}
+
+	public function blog_update()
+	{	
+		function file_errmsg($code){ 
+		   switch($code){ 
+		       case(UPLOAD_ERR_INI_SIZE): 
+		           return "업로드한 파일이 php.ini upload_max_filesize보다 큽니다."; 
+			   case(UPLOAD_ERR_FORM_SIZE): 
+			       return "업로드한 파일이 MAX_FILE_SIZE 보다 큽니다. "; 
+			   case(UPLOAD_ERR_PARTIAL): 
+			       return "파일이 일부분만 전송되었습니다. 다시 시도해 주십시요."; 
+			   case(UPLOAD_ERR_NO_FILE): 
+			       return "파일이 전송되지 않았습니다."; 
+			   case(UPLOAD_ERR_NO_TMP_DIR): 
+			       return "임시 폴더가 없습니다."; 
+			   case(UPLOAD_ERR_CANT_WRITE): 
+			       return "디스크에 파일 쓰기를 실패했습니다. 다시 시도해 주십시요."; 
+			   default: 
+			       return "확장에 의해 파일 업로드가 중지되었습니다."; 
+		   } 
+		}
+
+		// 서버에 저장될 디렉토리이름 
+		$uploaddir = './__RF/Blog/';
+		// 서버에 저장될 파일이름 
+		$filename = basename($_FILES['userfile']['name']);
+		$md5filename = $uploaddir . md5("blog_".$filename);
+		$ext = array_pop(explode(".","$filename"));
+
+		echo $_POST["id"];
+
+		if($_FILES['userfile']['error'] === UPLOAD_ERR_OK) { 
+		    if(strtolower($ext) == "php") {
+		         echo "확장자 php파일은 업로드 하실수 없습니다."; 
+		    } 
+		    else if($_FILES['userfile']['size'] <= 0){ 
+		        echo "파일 업로드에 실패하였습니다."; 
+		    } else { 
+		        // HTTP post로 전송된 것인지 체크합니다. 
+		        if(!is_uploaded_file($_FILES['userfile']['tmp_name'])) { 
+		             echo "HTTP로 전송된 파일이 아닙니다."; 
+		        } else { 
+		             // move_uploaded_file은 임시 저장되어 있는 파일을 디렉토리로 이동합니다. 
+		             if (move_uploaded_file($_FILES['userfile']['tmp_name'], $md5filename)) { 
+					      $write_model = $this->loadModel('Write_Model');
+						  $write_model->updateBlog($_POST["id"], $_POST["title"], $_POST["content"], md5("blog_".$filename));
+						  echo "<script>document.location.href='blog';</script>"; 
+		             } else { 
+		                  echo "파일 업로드 실패입니다.\n"; 
+		             }
+		        }
+		    }
+		} else { 
+		    echo file_errmsg($_FILES['userfile']['error']);
+		} 
+
+		print_r($_FILES);
 	}
 
 	// 블로그에서 쓴 글을 업로드 합니다.
@@ -81,7 +151,7 @@ class Main extends Plasma_Controller
 			   default: 
 			       return "확장에 의해 파일 업로드가 중지되었습니다."; 
 		   } 
-		} 
+		}
 
 		// 서버에 저장될 디렉토리이름 
 		$uploaddir = './__RF/Blog/'; 
@@ -103,7 +173,6 @@ class Main extends Plasma_Controller
 		        } else { 
 		             // move_uploaded_file은 임시 저장되어 있는 파일을 디렉토리로 이동합니다. 
 		             if (move_uploaded_file($_FILES['userfile']['tmp_name'], $md5filename)) { 
-		                  echo "성공적으로 업로드 되었습니다.\n";
 					      $write_model = $this->loadModel('Write_Model');
 						  $write_model->addFile($_POST["title"], $_POST["content"], md5("blog_".$filename));
 						  echo "<script>document.location.href='blog';</script>"; 
@@ -111,9 +180,9 @@ class Main extends Plasma_Controller
 		                  echo "파일 업로드 실패입니다.\n"; 
 		             }
 		        }
-		    } 
+		    }
 		} else { 
-		    echo file_errmsg($_FILES['userfile']['error']); 
+		    echo file_errmsg($_FILES['userfile']['error']);
 		} 
 
 		print_r($_FILES); 

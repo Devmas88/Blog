@@ -1,43 +1,49 @@
-
-    <div class="span12">	
+	<div class="span12">	
 		<div id="profile">
-			<div id="profile_img">
-				<br>
-		        <center>
-		        	<img src="../public/img/profile.png" class="img-circle" alt="profile">
-		        </center>
-		    </div>
+		    <center>
+				<div id="profile_img">
+					<br>
+			        <img src="../public/img/profile.png" class="img-circle" alt="profile">
+			    </div>
+		    </center>
 	        <p>
 	        <br>
-	        <center>
-	        <strong><i class="icon-user"></i> 최현섭(Devmas)</strong>
-	        <br>
-	        하려고 하면 방법이 생긴다.
-	        <br>
-	        </center>
+		        <center>
+		        <strong><i class="icon-user"></i> 최현섭(Devmas)</strong>
+		        <br>
+		        하려고 하면 방법이 생긴다.
+		        <br>
+		        </center>
+		        <div class="today_show">
+		            <center><div class="total">total : <?php echo $count; ?></div></center>
+		        </div>
 	        </p>
-	        <div class="today_show">
-	            <div class="today"></div>
-	            <div class="total"></div>
-	        </div>      
+	        
 		    <div>
 			  <ul class="nav nav-tabs nav-stacked">
 				<li><a href="#tab1" target="_self">기본</a></li>
+				<?php if (isset($_SESSION['id'])) { ?>
 				<li><a href="#tab2" target="_self">경력</a></li>
 				<li><a href="#tab3" target="_self">이력</a></li>
 				<li><a href="#tab4" target="_self">포폴</a></li>
+				<?php }?>
 			  </ul>
 		    </div>
 	    </div>
 	</div>
     
-    <div class="span12">
+    <div class="span12" id="bottom-container">
     	<h2 id="tab1">&nbsp기본</h2>
     	<table class="table table-hover">
 		  <tr>
 		  	<th class="table_title_year">년도</td>
 		  	<th class="table_title_content">내용</td>
 		  	<th class="table_title_file">보기</th>
+		  </tr>
+		  <tr>
+		  	<td>2013.11.11 ~</td>
+		  	<td class="table_content">Humanscape inc. Developer & Founder</td>
+		  	<td><a href="http://humanscape.co.kr" target="_blank"><i class="icon-search icon-white"></i></a></td>
 		  </tr>
 		  <tr>
 		  	<td>2016.2</td>
@@ -55,7 +61,7 @@
 		  	<td><a href="#"></a></td>
 		  </tr>
 		</table>
- 		
+ 		<?php if (isset($_SESSION['id'])) { ?>
  		<div id="tab2">
 	    	<h2>&nbsp경력</h2>
 	    	<table class="table table-hover">
@@ -290,6 +296,7 @@
 		  	<td><a href="#"></a></td>
 		  </tr>
 		</table>
+		<?php } ?>
     </div>
 
     <!-- Modal Start -->

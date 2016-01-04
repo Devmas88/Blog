@@ -11,8 +11,12 @@
 	    			<br><br>
 	    		</div>
 	    		<div class="blog_content">
-	    			<center><h4><?php echo $row->content; ?></h4></center>
+	    			<center><h4><?php echo nl2br($row->content);#$row->content; ?></h4></center>
 	    		</div>
+	    		<?php if (isset($_SESSION['id'])) { ?>
+	    		<br><br>
+	    		<button class="btn btn-inverse" name="blog_modify" onclick="location.href='/Blog/main/blog_modify/<?php echo $row->id; ?>'">수정</button>
+	    		<? } ?>
 	    		<div class="blog_comment">
 	    		</div>
 	    	</div>
